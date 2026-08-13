@@ -1,0 +1,11 @@
+Method,S@1 (%),H@5 (%),H@10 (%),MRR
+Random Selector,62.42,94.08,98.52,0.7599
+Geometry Selector,52.63,100.00,100.00,0.7412
+Gaussian-Quality Selector,52.63,100.00,100.00,0.7105
+Action Only,84.21,94.74,100.00,0.8760
+RGB+Action,78.95,94.74,100.00,0.8342
+RGB+Action+Depth,73.68,89.47,94.74,0.8100
+RGB+Action+Point Cloud,78.95,84.21,94.74,0.8207
+Proposed Selector,89.47,94.74,100.00,0.9175
+Oracle Ranking,100.00,100.00,100.00,1.0000
+

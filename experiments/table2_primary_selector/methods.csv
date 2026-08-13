@@ -1,0 +1,11 @@
+method,kind,train_entry,evaluation_entry,key_arguments
+Random Selector,non-neural,,methods/non_neural_selectors.py,--method random
+Geometry Selector,non-neural,,methods/non_neural_selectors.py,--method geometry
+Gaussian-Quality Selector,non-neural,,methods/non_neural_selectors.py,--method gaussian_quality
+Action Only,learned,methods/action_only/train_stage1_actionOnly_annealedSelect_v1.py,same trainer evaluation,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 0.1 --soft_top1_warmup_epochs 5"
+RGB+Action,learned,methods/rgb_action/train_stage1_clean_structural_nogs_annealedSelect_v1.py,same trainer evaluation,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 0.1 --soft_top1_warmup_epochs 5"
+RGB+Action+Depth,learned,methods/rgb_action_depth/train_stage1_RGBActionDepth_currentAnnealedSelect_v2.py,same trainer evaluation,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 0.1 --soft_top1_warmup_epochs 5"
+RGB+Action+Point Cloud,learned,methods/rgb_action_pointcloud/train_stage1_RGBActionPointCloud_currentAnnealedSelect_v1.py,same trainer evaluation,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 0.1 --soft_top1_warmup_epochs 5"
+Proposed Selector,learned,../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,same trainer evaluation,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 0.1 --soft_top1_warmup_epochs 5"
+Oracle Ranking,non-neural,,methods/non_neural_selectors.py,--method oracle
+
