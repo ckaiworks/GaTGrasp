@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "stage1_version": "current reproducible corridor_withgs 17/19",
+  "run": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane",
+  "entry": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/code/training/portable/stage1/deterministic_corridor_factorial_v1/corridor_sources_v1/train_stage1_old12_fullcorridor_annealedSelect_v1.py",
+  "data_root": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/generated/old12_ortho_v1/04_stage1_dataset/withGS",
+  "checkpoint_epoch": 50,
+  "fold_counts": {
+    "0": {
+      "objects": 4,
+      "successes": 3,
+      "stored_top1_success": 0.75
+    },
+    "1": {
+      "objects": 3,
+      "successes": 2,
+      "stored_top1_success": 0.6666666666666666
+    },
+    "2": {
+      "objects": 4,
+      "successes": 4,
+      "stored_top1_success": 1.0
+    },
+    "3": {
+      "objects": 4,
+      "successes": 4,
+      "stored_top1_success": 1.0
+    },
+    "4": {
+      "objects": 4,
+      "successes": 4,
+      "stored_top1_success": 1.0
+    }
+  },
+  "top1_physical_success": "17/19",
+  "checkpoint_records": [
+    {
+      "fold": 0,
+      "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_0/best_fullobject_softtop1.pt",
+      "sha256": "51fa55be726f16390658ef728dfb082b8d20e4195313a1efd200f67c18603c04"
+    },
+    {
+      "fold": 1,
+      "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_1/best_fullobject_softtop1.pt",
+      "sha256": "14b2b7280d73ac5fad921e4e21525c75eac0a05601f30b7b049f8cdc4bb816c6"
+    },
+    {
+      "fold": 2,
+      "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_2/best_fullobject_softtop1.pt",
+      "sha256": "f73f5de83467785cbc82fc2301fe1809052d63a3b1755e02a63394a64c6e0dae"
+    },
+    {
+      "fold": 3,
+      "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_3/best_fullobject_softtop1.pt",
+      "sha256": "6f53ab59090cf9f94f501021228580b11814c3ab1292ffefabc326d34ecc6210"
+    },
+    {
+      "fold": 4,
+      "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_4/best_fullobject_softtop1.pt",
+      "sha256": "da122052888f787eb4ea70f0212c496d6abfc72cc70ca92633295a7c6bf91a95"
+    }
+  ],
+  "selection_csv": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/reports/currentReproStage1_corridorWithGS_17of19_selection_v1/selected_stage1_current_repro17of19_withGS_top1.csv",
+  "selection_csv_sha256": "fa445d853bc9531b784f1ee60a76b8b59366c70b8e566b84188fd3d9b062c636",
+  "comparison_to_old_frozen_selection": {
+    "old_selection": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/reports/old12_17of19_to_latest_stage2_bce_same19_v1/selected_stage1_old12_17of19_withGS_top1.csv",
+    "same_raw_pair_id_count": 7,
+    "different_raw_pair_id_count": 12,
+    "differences": [
+      {
+        "object_id": 11,
+        "current_raw_pair_id": "GSU_obj_11_candidate_000425",
+        "old_raw_pair_id": "GSU_obj_11_candidate_000486"
+      },
+      {
+        "object_id": 39,
+        "current_raw_pair_id": "expandedNMS_obj_39_candidate_000177",
+        "old_raw_pair_id": "GSU_obj_39_candidate_000027"
+      },
+      {
+        "object_id": 42,
+        "current_raw_pair_id": "GSU_obj_42_candidate_000223",
+        "old_raw_pair_id": "GSU_obj_42_candidate_000108"
+      },
+      {
+        "object_id": 35,
+        "current_raw_pair_id": "GSU_obj_35_candidate_000190",
+        "old_raw_pair_id": "GSU_obj_35_candidate_000184"
+      },
+      {
+        "object_id": 33,
+        "current_raw_pair_id": "GSUrepair_obj_33_centerNMS3mm_candidate_000006",
+        "old_raw_pair_id": "GSUrepair_obj_33_centerNMS3mm_candidate_000002"
+      },
+      {
+        "object_id": 93,
+        "current_raw_pair_id": "GSU_obj_93_candidate_000626",
+        "old_raw_pair_id": "GSU_obj_93_candidate_000981"
+      },
+      {
+        "object_id": 94,
+        "current_raw_pair_id": "GSU_obj_94_candidate_000925",
+        "old_raw_pair_id": "GSU_obj_94_candidate_000834"
+      },
+      {
+        "object_id": 22,
+        "current_raw_pair_id": "GSU_obj_22_candidate_001424",
+        "old_raw_pair_id": "GSU_obj_22_candidate_001759"
+      },
+      {
+        "object_id": 95,
+        "current_raw_pair_id": "GSU_obj_95_candidate_000351",
+        "old_raw_pair_id": "GSU_obj_95_candidate_002308"
+      },
+      {
+        "object_id": 64,
+        "current_raw_pair_id": "GSU_obj_64_candidate_000157",
+        "old_raw_pair_id": "GSU_obj_64_candidate_000172"
+      },
+      {
+        "object_id": 76,
+        "current_raw_pair_id": "GSU_obj_76_candidate_001927",
+        "old_raw_pair_id": "GSU_obj_76_candidate_001140"
+      },
+      {
+        "object_id": 77,
+        "current_raw_pair_id": "GSU_obj_77_candidate_000589",
+        "old_raw_pair_id": "GSU_obj_77_candidate_000325"
+      }
+    ]
+  }
+}

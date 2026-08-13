@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "variant": "nogs",
+  "input": "RGB+Action13+Touch",
+  "selection_sha256": "4e8870b214a64ccaf938bd750b88b2c38b570df88dce5936d7d1fc4e56f364b4",
+  "same_stage1_actions": true,
+  "metrics": {
+    "n": 19,
+    "positive": 17,
+    "negative": 2,
+    "tp": 16,
+    "tn": 1,
+    "fp": 1,
+    "fn": 1,
+    "accuracy": 0.8947368421052632,
+    "specificity": 0.5,
+    "sensitivity": 0.9411764705882353,
+    "macro_f1": 0.7205882352941176,
+    "auroc": 0.8088235294117647,
+    "auprc_average_precision": 0.9740232351573638,
+    "brier": 0.10461621802425432,
+    "ece5_equal_width": 0.09425856565174301,
+    "probability_mean": 0.8837322498622694
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage2_cleancontrols_old12touch_weightedBCE_seed42_v2_gpu0_rotate5/noGS/fold_0/checkpoint_epoch_050.pt",
+        "sha256": "2420996a6095ad1124b33f99bb2a998e3c4842fe4f07f2d141926e543079cdd2",
+        "epoch": 50,
+        "state_key": "model"
+      },
+      "test_csv": "/root/autodl-tmp/ATGS/cleanroom_test_20260809/runtime_indexes_v2/stage2_old12_touch/folds/fold_0/test.csv",
+      "test_csv_sha256": "0e810c217beafec71ad87fbfd9eb99d9e0c6d743e950051ccca72c7a256a5a48",
+      "feature_stats_sha256": "6b39edf656db6ca3e0a7d63d0343b17a0ca8d85c3e323e2f0c7bed3724235558",
+      "contract": {
+        "experiment": "stage2_clean_singlehead_rgb_action_touch_weighted_bce_v1",
+        "training_initialization": "fresh end-to-end",
+        "output": "one success logit",
+        "inputs_used": [
+          "RGB",
+          "Action13",
+          "bilateral real Touch"
+        ],
+        "inputs_not_used": [
+          "left contact reconstructed surface",
+          "right contact reconstructed surface",
+          "closing corridor reconstructed surface"
+        ],
+        "objective": "weighted BCE only",
+        "positive_weight": 0.6108695652173913,
+        "touch_encoder": "shared bilateral ResNet18(weights=None), all parameters trainable",
+        "seed": 42,
+        "batch_size": 32,
+        "epochs": 50,
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "deterministic_algorithms": "strict",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "tf32": false,
+        "torch_num_threads": 1,
+        "num_workers": 0,
+        "train_real_touch_rows": 2223,
+        "train_real_touch_positive": 1380,
+        "train_real_touch_negative": 843,
+        "missing_touch_rows_not_used_for_gradient": 27,
+        "test_selection": "none; fixed final epoch only"
+      }
+    },
+    {
+      "fold": 1,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage2_cleancontrols_old12touch_weightedBCE_seed42_v2_gpu0_rotate5/noGS/fold_1/checkpoint_epoch_050.pt",
+        "sha256": "bac8e0791b1aac708269cff3d18bd853649272ccb7f09b21d2dc6b23955d5834",
+        "epoch": 50,
+        "state_key": "model"
+      },
+      "test_csv": "/root/autodl-tmp/ATGS/cleanroom_test_20260809/runtime_indexes_v2/stage2_old12_touch/folds/fold_1/test.csv",
+      "test_csv_sha256": "559d6c678d6e5eacf6ded5a571a3e7ac0e2f70a12277017049d11790a6bc4b1d",
+      "feature_stats_sha256": "aa6032149ad2804ce6f92ec26b0a98873e32d1a3fb4400b6832f56745c45c53a",
+      "contract": {
+        "experiment": "stage2_clean_singlehead_rgb_action_touch_weighted_bce_v1",
+        "training_initialization": "fresh end-to-end",
+        "output": "one success logit",
+        "inputs_used": [
+          "RGB",
+          "Action13",
+          "bilateral real Touch"
+        ],
+        "inputs_not_used": [
+          "left contact reconstructed surface",
+          "right contact reconstructed surface",
+          "closing corridor reconstructed surface"
+        ],
+        "objective": "weighted BCE only",
+        "positive_weight": 0.4292682926829268,
+        "touch_encoder": "shared bilateral ResNet18(weights=None), all parameters trainable",
+        "seed": 42,
+        "batch_size": 32,
+        "epochs": 50,
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "deterministic_algorithms": "strict",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "tf32": false,
+        "torch_num_threads": 1,
+        "num_workers": 0,
+        "train_real_touch_rows": 2344,
+        "train_real_touch_positive": 1640,
+        "train_real_touch_negative": 704,
+        "missing_touch_rows_not_used_for_gradient": 56,
+        "test_selection": "none; fixed final epoch only"
+      }
+    },
+    {
+      "fold": 2,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage2_cleancontrols_old12touch_weightedBCE_seed42_v2_gpu0_rotate5/noGS/fold_2/checkpoint_epoch_050.pt",
+        "sha256": "7fd89830b51bbf7f62ec8b1d15576e3444e6e2b54e5851b39ba3f6ccf008d475",
+        "epoch": 50,
+        "state_key": "model"
+      },
+      "test_csv": "/root/autodl-tmp/ATGS/cleanroom_test_20260809/runtime_indexes_v2/stage2_old12_touch/folds/fold_2/test.csv",
+      "test_csv_sha256": "ebcce1d3fe8ce569f680f2e61cc966704a3f7980fcbbb9d57e194616afad8f45",
+      "feature_stats_sha256": "ac2dbefca76fee41e90bd45dc5bc363af3eb4b261efa7ff466ee6161fe32ef85",
+      "contract": {
+        "experiment": "stage2_clean_singlehead_rgb_action_touch_weighted_bce_v1",
+        "training_initialization": "fresh end-to-end",
+        "output": "one success logit",
+        "inputs_used": [
+          "RGB",
+          "Action13",
+          "bilateral real Touch"
+        ],
+        "inputs_not_used": [
+          "left contact reconstructed surface",
+          "right contact reconstructed surface",
+          "closing corridor reconstructed surface"
+        ],
+        "objective": "weighted BCE only",
+        "positive_weight": 0.6985121378230227,
+        "touch_encoder": "shared bilateral ResNet18(weights=None), all parameters trainable",
+        "seed": 42,
+        "batch_size": 32,
+        "epochs": 50,
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "deterministic_algorithms": "strict",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "tf32": false,
+        "torch_num_threads": 1,
+        "num_workers": 0,
+        "train_real_touch_rows": 2169,
+        "train_real_touch_positive": 1277,
+        "train_real_touch_negative": 892,
+        "missing_touch_rows_not_used_for_gradient": 81,
+        "test_selection": "none; fixed final epoch only"
+      }
+    },
+    {
+      "fold": 3,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage2_cleancontrols_old12touch_weightedBCE_seed42_v2_gpu0_rotate5/noGS/fold_3/checkpoint_epoch_050.pt",
+        "sha256": "d3a11b030048931baacff72fa3451a0a60e5136623ce916f0117ed3c595ab597",
+        "epoch": 50,
+        "state_key": "model"
+      },
+      "test_csv": "/root/autodl-tmp/ATGS/cleanroom_test_20260809/runtime_indexes_v2/stage2_old12_touch/folds/fold_3/test.csv",
+      "test_csv_sha256": "7c471620850a288215eba9f1f91a1be60fcf9d851c697441783af3cc493c2526",
+      "feature_stats_sha256": "d036993b1c77e5d25ba5c359c72ffba979c1fe3a116727475ad20d412c99efed",
+      "contract": {
+        "experiment": "stage2_clean_singlehead_rgb_action_touch_weighted_bce_v1",
+        "training_initialization": "fresh end-to-end",
+        "output": "one success logit",
+        "inputs_used": [
+          "RGB",
+          "Action13",
+          "bilateral real Touch"
+        ],
+        "inputs_not_used": [
+          "left contact reconstructed surface",
+          "right contact reconstructed surface",
+          "closing corridor reconstructed surface"
+        ],
+        "objective": "weighted BCE only",
+        "positive_weight": 0.5429992892679459,
+        "touch_encoder": "shared bilateral ResNet18(weights=None), all parameters trainable",
+        "seed": 42,
+        "batch_size": 32,
+        "epochs": 50,
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "deterministic_algorithms": "strict",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "tf32": false,
+        "torch_num_threads": 1,
+        "num_workers": 0,
+        "train_real_touch_rows": 2171,
+        "train_real_touch_positive": 1407,
+        "train_real_touch_negative": 764,
+        "missing_touch_rows_not_used_for_gradient": 79,
+        "test_selection": "none; fixed final epoch only"
+      }
+    },
+    {
+      "fold": 4,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage2_cleancontrols_old12touch_weightedBCE_seed42_v2_gpu0_rotate5/noGS/fold_4/checkpoint_epoch_050.pt",
+        "sha256": "cdc6c252389d6c6f1605b6cdfe30c358691ee61a249a782752e7781ab203f8bb",
+        "epoch": 50,
+        "state_key": "model"
+      },
+      "test_csv": "/root/autodl-tmp/ATGS/cleanroom_test_20260809/runtime_indexes_v2/stage2_old12_touch/folds/fold_4/test.csv",
+      "test_csv_sha256": "2201241ce9c0e672f52a1846c27c8b44a5f90109e663e202ee0691bc4841c046",
+      "feature_stats_sha256": "a2d0f950a6365ba95918bc4d7e1a8ee9c8f7ed515a33735115c2ff07ae7af450",
+      "contract": {
+        "experiment": "stage2_clean_singlehead_rgb_action_touch_weighted_bce_v1",
+        "training_initialization": "fresh end-to-end",
+        "output": "one success logit",
+        "inputs_used": [
+          "RGB",
+          "Action13",
+          "bilateral real Touch"
+        ],
+        "inputs_not_used": [
+          "left contact reconstructed surface",
+          "right contact reconstructed surface",
+          "closing corridor reconstructed surface"
+        ],
+        "objective": "weighted BCE only",
+        "positive_weight": 0.5361189801699717,
+        "touch_encoder": "shared bilateral ResNet18(weights=None), all parameters trainable",
+        "seed": 42,
+        "batch_size": 32,
+        "epochs": 50,
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "deterministic_algorithms": "strict",
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "tf32": false,
+        "torch_num_threads": 1,
+        "num_workers": 0,
+        "train_real_touch_rows": 2169,
+        "train_real_touch_positive": 1412,
+        "train_real_touch_negative": 757,
+        "missing_touch_rows_not_used_for_gradient": 81,
+        "test_selection": "none; fixed final epoch only"
+      }
+    }
+  ]
+}

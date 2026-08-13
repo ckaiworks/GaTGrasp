@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "model": "reproducible corridor-withGS Stage-1",
+  "physical_top1_success": "17/19",
+  "entry": "/root/autodl-tmp/ATGS/cleanroom_test_20260809/ActiveTouchGS_latest_release/src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py",
+  "entry_sha256": "07bbde236f12a850d9fd3a5a5d568526f86cff7c526169172482327fe36c78d5",
+  "run_root": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs",
+  "data_root": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/generated/old12_ortho_v1/04_stage1_dataset/withGS",
+  "selection_sha256": "4e8870b214a64ccaf938bd750b88b2c38b570df88dce5936d7d1fc4e56f364b4",
+  "reference_check": {
+    "path": "/root/autodl-tmp/ATGS/cleanroom_test_20260809/ActiveTouchGS_latest_release/reports/final_stage1_selection/selected_stage1_current_repro17of19_withGS_top1.csv",
+    "sha256": "fa445d853bc9531b784f1ee60a76b8b59366c70b8e566b84188fd3d9b062c636",
+    "same_actions": true,
+    "maximum_probability_error": 8.940696716308594e-06,
+    "probabilities_within_tolerance": true
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "test_csv": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/generated/old12_ortho_v1/04_stage1_dataset/withGS/folds/fold_0/test.csv",
+      "test_csv_sha256": "be7fdff4fad885ab1c991ef03e844d2379ca19e7dd7cbe561b8d594fa5d21201",
+      "feature_stats": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_0/fullobject_feature_stats.npz",
+      "feature_stats_sha256": "6b39edf656db6ca3e0a7d63d0343b17a0ca8d85c3e323e2f0c7bed3724235558",
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_0/best_fullobject_softtop1.pt",
+        "sha256": "51fa55be726f16390658ef728dfb082b8d20e4195313a1efd200f67c18603c04",
+        "epoch": 50,
+        "state_key": "model"
+      }
+    },
+    {
+      "fold": 1,
+      "test_csv": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/generated/old12_ortho_v1/04_stage1_dataset/withGS/folds/fold_1/test.csv",
+      "test_csv_sha256": "42691a85e2afd1d397e98c4219a7dfce94c5263e408594e019028adf6f986423",
+      "feature_stats": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_1/fullobject_feature_stats.npz",
+      "feature_stats_sha256": "aa6032149ad2804ce6f92ec26b0a98873e32d1a3fb4400b6832f56745c45c53a",
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_1/best_fullobject_softtop1.pt",
+        "sha256": "14b2b7280d73ac5fad921e4e21525c75eac0a05601f30b7b049f8cdc4bb816c6",
+        "epoch": 50,
+        "state_key": "model"
+      }
+    },
+    {
+      "fold": 2,
+      "test_csv": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/generated/old12_ortho_v1/04_stage1_dataset/withGS/folds/fold_2/test.csv",
+      "test_csv_sha256": "d8b46bb1a5927627fe4699238fb38ba54a968a1da5c271930701e34a6bc7a9d7",
+      "feature_stats": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_2/fullobject_feature_stats.npz",
+      "feature_stats_sha256": "ac2dbefca76fee41e90bd45dc5bc363af3eb4b261efa7ff466ee6161fe32ef85",
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_2/best_fullobject_softtop1.pt",
+        "sha256": "f73f5de83467785cbc82fc2301fe1809052d63a3b1755e02a63394a64c6e0dae",
+        "epoch": 50,
+        "state_key": "model"
+      }
+    },
+    {
+      "fold": 3,
+      "test_csv": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/generated/old12_ortho_v1/04_stage1_dataset/withGS/folds/fold_3/test.csv",
+      "test_csv_sha256": "ac6d4b36c900ca0d5c7ba366e0e7c4a1c70207086001be37de56e08029fe7989",
+      "feature_stats": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_3/fullobject_feature_stats.npz",
+      "feature_stats_sha256": "d036993b1c77e5d25ba5c359c72ffba979c1fe3a116727475ad20d412c99efed",
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_3/best_fullobject_softtop1.pt",
+        "sha256": "6f53ab59090cf9f94f501021228580b11814c3ab1292ffefabc326d34ecc6210",
+        "epoch": 50,
+        "state_key": "model"
+      }
+    },
+    {
+      "fold": 4,
+      "test_csv": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/generated/old12_ortho_v1/04_stage1_dataset/withGS/folds/fold_4/test.csv",
+      "test_csv_sha256": "fe971296e14e066a00867f34bc3dc41243a8c9502a08c2447497c0d2b278e8c5",
+      "feature_stats": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_4/fullobject_feature_stats.npz",
+      "feature_stats_sha256": "a2d0f950a6365ba95918bc4d7e1a8ee9c8f7ed515a33735115c2ff07ae7af450",
+      "checkpoint": {
+        "path": "/root/autodl-tmp/ATGS/runs/stage1_corridor_withgs_nogs_seed42_fullRepro_v5_omp1_10lane/01_formal_fivefold/corridor_withgs/fold_4/best_fullobject_softtop1.pt",
+        "sha256": "da122052888f787eb4ea70f0212c496d6abfc72cc70ca92633295a7c6bf91a95",
+        "epoch": 50,
+        "state_key": "model"
+      }
+    }
+  ]
+}

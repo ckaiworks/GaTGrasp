@@ -1,0 +1,553 @@
+{
+  "status": "PASS",
+  "verification_status": "VERIFIED_BY_CHECKPOINT_REINFERENCE",
+  "results": {
+    "selected_full_lambda_1": {
+      "label": "Selected full model, lambda=1",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 17,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.9175438596491228,
+        "s1": 0.8947368421052632,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      }
+    },
+    "true_bce_only": {
+      "label": "Full RGB+Action+GS, weighted BCE only",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 16,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.8947368421052632,
+        "s1": 0.8421052631578947,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "folds": [
+        {
+          "variant": "true_bce_only",
+          "fold": 0,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.875
+        },
+        {
+          "variant": "true_bce_only",
+          "fold": 1,
+          "objects": 3,
+          "s1_count": 2,
+          "h5_count": 2,
+          "h10_count": 3,
+          "mrr": 0.7222222222222223
+        },
+        {
+          "variant": "true_bce_only",
+          "fold": 2,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "true_bce_only",
+          "fold": 3,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "true_bce_only",
+          "fold": 4,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.8333333333333334
+        }
+      ],
+      "objects": {
+        "11": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998118281364441,
+          "candidate_count": 150
+        },
+        "39": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.99842369556427,
+          "candidate_count": 150
+        },
+        "41": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9991260170936584,
+          "candidate_count": 150
+        },
+        "42": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998786449432373,
+          "candidate_count": 150
+        },
+        "34": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999798536300659,
+          "candidate_count": 150
+        },
+        "35": {
+          "best_positive_rank": 6,
+          "top1_label": 0,
+          "top1_probability": 0.9983817338943481,
+          "candidate_count": 150
+        },
+        "36": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997944235801697,
+          "candidate_count": 150
+        },
+        "32": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9996436834335327,
+          "candidate_count": 150
+        },
+        "33": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9950424432754517,
+          "candidate_count": 150
+        },
+        "93": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9963505268096924,
+          "candidate_count": 150
+        },
+        "94": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9988048076629639,
+          "candidate_count": 150
+        },
+        "22": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998136162757874,
+          "candidate_count": 150
+        },
+        "60": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9038217067718506,
+          "candidate_count": 150
+        },
+        "84": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999052286148071,
+          "candidate_count": 150
+        },
+        "95": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999743700027466,
+          "candidate_count": 150
+        },
+        "64": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9996803998947144,
+          "candidate_count": 150
+        },
+        "76": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998866319656372,
+          "candidate_count": 150
+        },
+        "77": {
+          "best_positive_rank": 3,
+          "top1_label": 0,
+          "top1_probability": 0.9874624609947205,
+          "candidate_count": 150
+        },
+        "78": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9995771050453186,
+          "candidate_count": 150
+        }
+      },
+      "entry": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/code/training/portable/stage1/deterministic_corridor_factorial_v1/bce_only_sources_v1/train_stage1_old12_fullcorridor_bceOnly_v1.py",
+      "run": "/root/autodl-tmp/ATGS/runs/stage1_ablation_fullcorridor_withgs_trueBCEonly_seed42_v1"
+    },
+    "clean_action_only": {
+      "label": "Clean Action Only, lambda=1",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 16,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.8760233918128654,
+        "s1": 0.8421052631578947,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "folds": [
+        {
+          "variant": "clean_action_only",
+          "fold": 0,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "clean_action_only",
+          "fold": 1,
+          "objects": 3,
+          "s1_count": 2,
+          "h5_count": 3,
+          "h10_count": 3,
+          "mrr": 0.7777777777777777
+        },
+        {
+          "variant": "clean_action_only",
+          "fold": 2,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "clean_action_only",
+          "fold": 3,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 3,
+          "h10_count": 4,
+          "mrr": 0.7777777777777778
+        },
+        {
+          "variant": "clean_action_only",
+          "fold": 4,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.8
+        }
+      ],
+      "objects": {
+        "11": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9897358417510986,
+          "candidate_count": 150
+        },
+        "39": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.5771085619926453,
+          "candidate_count": 150
+        },
+        "41": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9878395199775696,
+          "candidate_count": 150
+        },
+        "42": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9655521512031555,
+          "candidate_count": 150
+        },
+        "34": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9781960248947144,
+          "candidate_count": 150
+        },
+        "35": {
+          "best_positive_rank": 3,
+          "top1_label": 0,
+          "top1_probability": 0.85591059923172,
+          "candidate_count": 150
+        },
+        "36": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9315736293792725,
+          "candidate_count": 150
+        },
+        "32": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9790447354316711,
+          "candidate_count": 150
+        },
+        "33": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9781500697135925,
+          "candidate_count": 150
+        },
+        "93": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9867120981216431,
+          "candidate_count": 150
+        },
+        "94": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9722309708595276,
+          "candidate_count": 150
+        },
+        "22": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9529196619987488,
+          "candidate_count": 150
+        },
+        "60": {
+          "best_positive_rank": 9,
+          "top1_label": 0,
+          "top1_probability": 0.1638224720954895,
+          "candidate_count": 150
+        },
+        "84": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9979612827301025,
+          "candidate_count": 150
+        },
+        "95": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9835813045501709,
+          "candidate_count": 150
+        },
+        "64": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9776405692100525,
+          "candidate_count": 150
+        },
+        "76": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9815775752067566,
+          "candidate_count": 150
+        },
+        "77": {
+          "best_positive_rank": 5,
+          "top1_label": 0,
+          "top1_probability": 0.9779168367385864,
+          "candidate_count": 150
+        },
+        "78": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9705810546875,
+          "candidate_count": 150
+        }
+      },
+      "entry": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/code/training/portable/stage1/deterministic_corridor_factorial_v1/action_only_sources_v1/train_stage1_actionOnly_annealedSelect_v1.py",
+      "run": "/root/autodl-tmp/ATGS/runs/stage1_ablation_cleanActionOnly_lambda1_tempCosine_warmup5_seed42_v1"
+    },
+    "clean_gs_action": {
+      "label": "Clean GS+Action, lambda=1",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 12,
+        "h5_count": 17,
+        "h10_count": 18,
+        "mrr": 0.7574162679425838,
+        "s1": 0.631578947368421,
+        "h5": 0.8947368421052632,
+        "h10": 0.9473684210526315
+      },
+      "folds": [
+        {
+          "variant": "clean_gs_action",
+          "fold": 0,
+          "objects": 4,
+          "s1_count": 2,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.675
+        },
+        {
+          "variant": "clean_gs_action",
+          "fold": 1,
+          "objects": 3,
+          "s1_count": 2,
+          "h5_count": 3,
+          "h10_count": 3,
+          "mrr": 0.8333333333333334
+        },
+        {
+          "variant": "clean_gs_action",
+          "fold": 2,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "clean_gs_action",
+          "fold": 3,
+          "objects": 4,
+          "s1_count": 2,
+          "h5_count": 3,
+          "h10_count": 4,
+          "mrr": 0.65
+        },
+        {
+          "variant": "clean_gs_action",
+          "fold": 4,
+          "objects": 4,
+          "s1_count": 2,
+          "h5_count": 3,
+          "h10_count": 3,
+          "mrr": 0.6477272727272727
+        }
+      ],
+      "objects": {
+        "11": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.9977164268493652,
+          "candidate_count": 150
+        },
+        "39": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9351089596748352,
+          "candidate_count": 150
+        },
+        "41": {
+          "best_positive_rank": 5,
+          "top1_label": 0,
+          "top1_probability": 0.9731295108795166,
+          "candidate_count": 150
+        },
+        "42": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9869080781936646,
+          "candidate_count": 150
+        },
+        "34": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.999884843826294,
+          "candidate_count": 150
+        },
+        "35": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9994162321090698,
+          "candidate_count": 150
+        },
+        "36": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997908473014832,
+          "candidate_count": 150
+        },
+        "32": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9980904459953308,
+          "candidate_count": 150
+        },
+        "33": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.999025821685791,
+          "candidate_count": 150
+        },
+        "93": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9987585544586182,
+          "candidate_count": 150
+        },
+        "94": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9990878105163574,
+          "candidate_count": 150
+        },
+        "22": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9995368719100952,
+          "candidate_count": 150
+        },
+        "60": {
+          "best_positive_rank": 10,
+          "top1_label": 0,
+          "top1_probability": 0.9890004396438599,
+          "candidate_count": 150
+        },
+        "84": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999639987945557,
+          "candidate_count": 150
+        },
+        "95": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.9999059438705444,
+          "candidate_count": 150
+        },
+        "64": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.9994675517082214,
+          "candidate_count": 150
+        },
+        "76": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9995660185813904,
+          "candidate_count": 150
+        },
+        "77": {
+          "best_positive_rank": 11,
+          "top1_label": 0,
+          "top1_probability": 0.9987050294876099,
+          "candidate_count": 150
+        },
+        "78": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9985822439193726,
+          "candidate_count": 150
+        }
+      },
+      "entry": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/code/training/portable/stage1/deterministic_corridor_factorial_v1/gs_action_sources_v1/train_stage1_gsAction_annealedSelect_v1.py",
+      "run": "/root/autodl-tmp/ATGS/runs/stage1_ablation_cleanGSAction_lambda1_tempCosine_warmup5_seed42_v1"
+    }
+  }
+}

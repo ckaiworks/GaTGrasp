@@ -1,0 +1,421 @@
+{
+  "status": "PASS",
+  "verification_status": "VERIFIED_BY_CHECKPOINT_REINFERENCE",
+  "contract": {
+    "stage": "Stage-1 only",
+    "model": "full RGB+Action+GS including corridor",
+    "same_dataset_and_folds": true,
+    "same_seed": 42,
+    "same_fixed_epoch": 50,
+    "same_lambda": 1.0,
+    "same_temperature_schedule": "cosine 1.0 to 0.1",
+    "same_warmup_epochs": 5,
+    "only_changed_component": "GS node pooling (mean-only or max-only)",
+    "touch_used": false,
+    "stage2_used": false
+  },
+  "results": {
+    "mean_plus_max_full": {
+      "label": "Mean + Max (full)",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 17,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.9175438596491228,
+        "s1": 0.8947368421052632,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "source": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/reports/stage1_deterministic_corridor_factorial_lambda1_seed42_v4/factorial_results.json"
+    },
+    "mean_only": {
+      "label": "Mean Only",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 14,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.8276942355889725,
+        "s1": 0.7368421052631579,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "folds": [
+        {
+          "variant": "mean_only",
+          "fold": 0,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.875
+        },
+        {
+          "variant": "mean_only",
+          "fold": 1,
+          "objects": 3,
+          "s1_count": 2,
+          "h5_count": 2,
+          "h10_count": 3,
+          "mrr": 0.7142857142857143
+        },
+        {
+          "variant": "mean_only",
+          "fold": 2,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.8125
+        },
+        {
+          "variant": "mean_only",
+          "fold": 3,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.875
+        },
+        {
+          "variant": "mean_only",
+          "fold": 4,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.8333333333333334
+        }
+      ],
+      "objects": {
+        "11": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.999967098236084,
+          "candidate_count": 150
+        },
+        "39": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.9977464079856873,
+          "candidate_count": 150
+        },
+        "41": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.999839186668396,
+          "candidate_count": 150
+        },
+        "42": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997876286506653,
+          "candidate_count": 150
+        },
+        "34": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999030828475952,
+          "candidate_count": 150
+        },
+        "35": {
+          "best_positive_rank": 7,
+          "top1_label": 0,
+          "top1_probability": 0.99970942735672,
+          "candidate_count": 150
+        },
+        "36": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998273849487305,
+          "candidate_count": 150
+        },
+        "32": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9994482398033142,
+          "candidate_count": 150
+        },
+        "33": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9891471862792969,
+          "candidate_count": 150
+        },
+        "93": {
+          "best_positive_rank": 4,
+          "top1_label": 0,
+          "top1_probability": 0.9890455007553101,
+          "candidate_count": 150
+        },
+        "94": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9993290901184082,
+          "candidate_count": 150
+        },
+        "22": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999321699142456,
+          "candidate_count": 150
+        },
+        "60": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.8691049814224243,
+          "candidate_count": 150
+        },
+        "84": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998917579650879,
+          "candidate_count": 150
+        },
+        "95": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999673366546631,
+          "candidate_count": 150
+        },
+        "64": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9985024929046631,
+          "candidate_count": 150
+        },
+        "76": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9992040991783142,
+          "candidate_count": 150
+        },
+        "77": {
+          "best_positive_rank": 3,
+          "top1_label": 0,
+          "top1_probability": 0.9801807999610901,
+          "candidate_count": 150
+        },
+        "78": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9920772314071655,
+          "candidate_count": 150
+        }
+      },
+      "training_schedule": {
+        "temperature_first": 1.0,
+        "temperature_last": 0.1,
+        "temperature_unique": 50,
+        "lambda_first": 0.2,
+        "lambda_epoch_5": 1.0,
+        "lambda_epoch_10": 1.0,
+        "lambda_last": 1.0
+      },
+      "run": "/root/autodl-tmp/ATGS/runs/stage1_ablation_cleanMeanOnly_lambda1_tempCosine_warmup5_seed42_v1",
+      "trainer": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/code/training/portable/stage1/deterministic_corridor_factorial_v1/mean_only_sources_v1/train_stage1_meanOnly_annealedSelect_v1.py"
+    },
+    "max_only": {
+      "label": "Max Only",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 15,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.8460526315789473,
+        "s1": 0.7894736842105263,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "folds": [
+        {
+          "variant": "max_only",
+          "fold": 0,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.8125
+        },
+        {
+          "variant": "max_only",
+          "fold": 1,
+          "objects": 3,
+          "s1_count": 2,
+          "h5_count": 2,
+          "h10_count": 3,
+          "mrr": 0.7083333333333334
+        },
+        {
+          "variant": "max_only",
+          "fold": 2,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "max_only",
+          "fold": 3,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.875
+        },
+        {
+          "variant": "max_only",
+          "fold": 4,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.8
+        }
+      ],
+      "objects": {
+        "11": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999856948852539,
+          "candidate_count": 150
+        },
+        "39": {
+          "best_positive_rank": 4,
+          "top1_label": 0,
+          "top1_probability": 0.9999682903289795,
+          "candidate_count": 150
+        },
+        "41": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999747276306152,
+          "candidate_count": 150
+        },
+        "42": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999967813491821,
+          "candidate_count": 150
+        },
+        "34": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998782873153687,
+          "candidate_count": 150
+        },
+        "35": {
+          "best_positive_rank": 8,
+          "top1_label": 0,
+          "top1_probability": 0.9999552965164185,
+          "candidate_count": 150
+        },
+        "36": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999343156814575,
+          "candidate_count": 150
+        },
+        "32": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9994805455207825,
+          "candidate_count": 150
+        },
+        "33": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9937578439712524,
+          "candidate_count": 150
+        },
+        "93": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9708650708198547,
+          "candidate_count": 150
+        },
+        "94": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9985926747322083,
+          "candidate_count": 150
+        },
+        "22": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.999764621257782,
+          "candidate_count": 150
+        },
+        "60": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.6748368740081787,
+          "candidate_count": 150
+        },
+        "84": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997316002845764,
+          "candidate_count": 150
+        },
+        "95": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.9999879598617554,
+          "candidate_count": 150
+        },
+        "64": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9995216131210327,
+          "candidate_count": 150
+        },
+        "76": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998903274536133,
+          "candidate_count": 150
+        },
+        "77": {
+          "best_positive_rank": 5,
+          "top1_label": 0,
+          "top1_probability": 0.9975047707557678,
+          "candidate_count": 150
+        },
+        "78": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9985561966896057,
+          "candidate_count": 150
+        }
+      },
+      "training_schedule": {
+        "temperature_first": 1.0,
+        "temperature_last": 0.1,
+        "temperature_unique": 50,
+        "lambda_first": 0.2,
+        "lambda_epoch_5": 1.0,
+        "lambda_epoch_10": 1.0,
+        "lambda_last": 1.0
+      },
+      "run": "/root/autodl-tmp/ATGS/runs/stage1_ablation_cleanMaxOnly_lambda1_tempCosine_warmup5_seed42_v1",
+      "trainer": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/code/training/portable/stage1/deterministic_corridor_factorial_v1/max_only_sources_v1/train_stage1_maxOnly_annealedSelect_v1.py"
+    }
+  },
+  "comparisons": {
+    "mean_only_minus_full": {
+      "s1_count": -3,
+      "h5_count": 0,
+      "h10_count": 0,
+      "mrr": -0.08984962406015029
+    },
+    "max_only_minus_full": {
+      "s1_count": -2,
+      "h5_count": 0,
+      "h10_count": 0,
+      "mrr": -0.0714912280701755
+    }
+  }
+}

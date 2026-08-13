@@ -1,0 +1,418 @@
+{
+  "status": "PASS",
+  "verification_status": "VERIFIED_BY_CHECKPOINT_REINFERENCE",
+  "contract": {
+    "stage": "Stage-1 only",
+    "model": "full corridor withGS Old12",
+    "same_dataset_and_folds": true,
+    "same_seed": 42,
+    "same_fixed_epoch": 50,
+    "same_temperature_schedule": "cosine 1.0 to 0.1",
+    "same_warmup_epochs": 5,
+    "only_changed_hyperparameter": "selection loss lambda_max",
+    "touch_used": false,
+    "stage2_used": false
+  },
+  "results": {
+    "baseline_lambda_1": {
+      "label": "lambda=1.0 (selected baseline)",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 17,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.9175438596491228,
+        "s1": 0.8947368421052632,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "source": "/root/autodl-tmp/ATGS/github_release/ActiveTouchGS/reports/stage1_deterministic_corridor_factorial_lambda1_seed42_v4/factorial_results.json"
+    },
+    "lambda_0p5": {
+      "label": "lambda=0.5",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 16,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.8912280701754386,
+        "s1": 0.8421052631578947,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "folds": [
+        {
+          "variant": "lambda_0p5",
+          "fold": 0,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.8333333333333333
+        },
+        {
+          "variant": "lambda_0p5",
+          "fold": 1,
+          "objects": 3,
+          "s1_count": 2,
+          "h5_count": 2,
+          "h10_count": 3,
+          "mrr": 0.7000000000000001
+        },
+        {
+          "variant": "lambda_0p5",
+          "fold": 2,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "lambda_0p5",
+          "fold": 3,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "lambda_0p5",
+          "fold": 4,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.875
+        }
+      ],
+      "objects": {
+        "11": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998831748962402,
+          "candidate_count": 150
+        },
+        "39": {
+          "best_positive_rank": 3,
+          "top1_label": 0,
+          "top1_probability": 0.9994945526123047,
+          "candidate_count": 150
+        },
+        "41": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997169375419617,
+          "candidate_count": 150
+        },
+        "42": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999213218688965,
+          "candidate_count": 150
+        },
+        "34": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999637603759766,
+          "candidate_count": 150
+        },
+        "35": {
+          "best_positive_rank": 10,
+          "top1_label": 0,
+          "top1_probability": 0.9988662004470825,
+          "candidate_count": 150
+        },
+        "36": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997366070747375,
+          "candidate_count": 150
+        },
+        "32": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998657703399658,
+          "candidate_count": 150
+        },
+        "33": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9977912902832031,
+          "candidate_count": 150
+        },
+        "93": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9950374960899353,
+          "candidate_count": 150
+        },
+        "94": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9991267323493958,
+          "candidate_count": 150
+        },
+        "22": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997732043266296,
+          "candidate_count": 150
+        },
+        "60": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.8754487037658691,
+          "candidate_count": 150
+        },
+        "84": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999558925628662,
+          "candidate_count": 150
+        },
+        "95": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999920129776001,
+          "candidate_count": 150
+        },
+        "64": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.9996680021286011,
+          "candidate_count": 150
+        },
+        "76": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999195337295532,
+          "candidate_count": 150
+        },
+        "77": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9843989610671997,
+          "candidate_count": 150
+        },
+        "78": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9990218877792358,
+          "candidate_count": 150
+        }
+      },
+      "training_schedule": {
+        "temperature_first": 1.0,
+        "temperature_last": 0.1,
+        "temperature_unique": 50,
+        "lambda_first": 0.1,
+        "lambda_epoch_5": 0.5,
+        "lambda_epoch_10": 0.5,
+        "lambda_last": 0.5
+      },
+      "run": "/root/autodl-tmp/ATGS/runs/stage1_ablation_lambda0p5_tempCosine_warmup5_seed42_v1"
+    },
+    "lambda_2": {
+      "label": "lambda=2.0",
+      "aggregate": {
+        "objects": 19,
+        "s1_count": 17,
+        "h5_count": 18,
+        "h10_count": 19,
+        "mrr": 0.9269005847953217,
+        "s1": 0.8947368421052632,
+        "h5": 0.9473684210526315,
+        "h10": 1.0
+      },
+      "folds": [
+        {
+          "variant": "lambda_2",
+          "fold": 0,
+          "objects": 4,
+          "s1_count": 3,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 0.875
+        },
+        {
+          "variant": "lambda_2",
+          "fold": 1,
+          "objects": 3,
+          "s1_count": 2,
+          "h5_count": 2,
+          "h10_count": 3,
+          "mrr": 0.7037037037037037
+        },
+        {
+          "variant": "lambda_2",
+          "fold": 2,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "lambda_2",
+          "fold": 3,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        },
+        {
+          "variant": "lambda_2",
+          "fold": 4,
+          "objects": 4,
+          "s1_count": 4,
+          "h5_count": 4,
+          "h10_count": 4,
+          "mrr": 1.0
+        }
+      ],
+      "objects": {
+        "11": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999537467956543,
+          "candidate_count": 150
+        },
+        "39": {
+          "best_positive_rank": 2,
+          "top1_label": 0,
+          "top1_probability": 0.9993786811828613,
+          "candidate_count": 150
+        },
+        "41": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9998401403427124,
+          "candidate_count": 150
+        },
+        "42": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999247789382935,
+          "candidate_count": 150
+        },
+        "34": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999895095825195,
+          "candidate_count": 150
+        },
+        "35": {
+          "best_positive_rank": 9,
+          "top1_label": 0,
+          "top1_probability": 0.9992644190788269,
+          "candidate_count": 150
+        },
+        "36": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9997021555900574,
+          "candidate_count": 150
+        },
+        "32": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999080896377563,
+          "candidate_count": 150
+        },
+        "33": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9986026883125305,
+          "candidate_count": 150
+        },
+        "93": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9972330927848816,
+          "candidate_count": 150
+        },
+        "94": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9994634985923767,
+          "candidate_count": 150
+        },
+        "22": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9995502829551697,
+          "candidate_count": 150
+        },
+        "60": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.8369443416595459,
+          "candidate_count": 150
+        },
+        "84": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999430179595947,
+          "candidate_count": 150
+        },
+        "95": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999856948852539,
+          "candidate_count": 150
+        },
+        "64": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.999761164188385,
+          "candidate_count": 150
+        },
+        "76": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9999043941497803,
+          "candidate_count": 150
+        },
+        "77": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9758133888244629,
+          "candidate_count": 150
+        },
+        "78": {
+          "best_positive_rank": 1,
+          "top1_label": 1,
+          "top1_probability": 0.9993879795074463,
+          "candidate_count": 150
+        }
+      },
+      "training_schedule": {
+        "temperature_first": 1.0,
+        "temperature_last": 0.1,
+        "temperature_unique": 50,
+        "lambda_first": 0.4,
+        "lambda_epoch_5": 2.0,
+        "lambda_epoch_10": 2.0,
+        "lambda_last": 2.0
+      },
+      "run": "/root/autodl-tmp/ATGS/runs/stage1_ablation_lambda2_tempCosine_warmup5_seed42_v1"
+    }
+  },
+  "comparisons": {
+    "lambda_0p5_minus_lambda_1": {
+      "s1_count": -1,
+      "h5_count": 0,
+      "h10_count": 0,
+      "mrr": -0.02631578947368418
+    },
+    "lambda_2_minus_lambda_1": {
+      "s1_count": 0,
+      "h5_count": 0,
+      "h10_count": 0,
+      "mrr": 0.009356725146198897
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Method,S@1 (%),H@5 (%),H@10 (%),MRR,Status
+Random Selector,62.42,94.08,98.52,0.7599,exact expectation
+Geometry Selector,52.63,100.00,100.00,0.7412,verified non-neural baseline
+Gaussian-Quality Selector,52.63,100.00,100.00,0.7105,verified non-neural baseline
+Action Only,84.21,94.74,100.00,0.8760,current clean deterministic
+RGB+Action,78.95,94.74,100.00,0.8342,current clean deterministic
+RGB+Action+Depth,73.68,89.47,94.74,0.8100,current clean deterministic
+RGB+Action+Point Cloud,78.95,84.21,94.74,0.8207,current clean deterministic
+Proposed Selector,89.47,94.74,100.00,0.9175,current selected Stage-1
+Oracle Ranking,100.00,100.00,100.00,1.0000,exact oracle

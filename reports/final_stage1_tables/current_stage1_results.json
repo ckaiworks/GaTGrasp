@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "verification_status": "VERIFIED_FROM_CURRENT_CLEAN_REPORTS",
+  "current_stage1_contract": {
+    "objects": 19,
+    "candidates_per_object": 150,
+    "rows": 2850,
+    "folds": 5,
+    "seed": 42,
+    "fixed_epoch": 50,
+    "loss": "Weighted BCE + lambda * Annealed Select",
+    "selected_lambda": 1.0,
+    "temperature": "cosine 1.0 to 0.1",
+    "warmup_epochs": 5,
+    "touch_used": false,
+    "stage2_used": false
+  },
+  "selected_full_result": {
+    "s1_count": 17,
+    "h5_count": 18,
+    "h10_count": 19,
+    "objects": 19,
+    "mrr": 0.9175438596491228
+  },
+  "source_reports": [
+    "reports/stage1_deterministic_corridor_factorial_lambda1_seed42_v4/factorial_results.json",
+    "reports/stage1_clean_completed_ablation_summary_v1/clean_completed_ablation_results.json",
+    "reports/stage1_clean_corridor_only_summary_v1/corridor_only_results.json",
+    "reports/stage1_clean_mean_max_pooling_ablation_summary_v1/mean_max_pooling_results.json",
+    "reports/stage1_lambda0p5_lambda2_ablation_summary_v1/lambda0p5_lambda2_results.json",
+    "reports/stage1_temperature_warmup_ablation_summary_v1/temperature_warmup_results.json",
+    "reports/all_current_ablations_v1/all_current_ablation_summary_v1.md"
+  ],
+  "current_clean_auxiliary_modalities": [
+    "RGB+Action+Depth",
+    "RGB+Action+Point Cloud"
+  ],
+  "excluded_as_not_current_clean_controls": [
+    "old Mass-only/Rank-only loss components",
+    "old surface/channel diagnostic families"
+  ],
+  "stage2": "See reports/final_checkpoint_cascade_retrained_v2"
+}
