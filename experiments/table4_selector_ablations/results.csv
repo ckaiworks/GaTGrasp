@@ -1,0 +1,18 @@
+Ablation block,Variant,S@1 (%),H@5 (%),H@10 (%),MRR
+Modality,Action Only,84.21,94.74,100.00,0.8760
+Modality,RGB+Action,78.95,94.74,100.00,0.8342
+Modality,GS+Action,63.16,89.47,94.74,0.7574
+Modality,RGB+Action+GS (full),89.47,94.74,100.00,0.9175
+Local GS region,Left/right contact patches only,84.21,94.74,100.00,0.8711
+Local GS region,Closing corridor only,63.16,94.74,94.74,0.7509
+Local GS region,Contact patches + corridor (full),89.47,94.74,100.00,0.9175
+GS node pooling,Mean Only,73.68,94.74,100.00,0.8277
+GS node pooling,Max Only,78.95,94.74,100.00,0.8461
+GS node pooling,Mean + Max (full),89.47,94.74,100.00,0.9175
+Selection-loss weight,Weighted BCE only (lambda=0),84.21,94.74,100.00,0.8947
+Selection-loss weight,Weighted BCE + 0.5 L_sel,84.21,94.74,100.00,0.8912
+Selection-loss weight,Weighted BCE + 1.0 L_sel (selected),89.47,94.74,100.00,0.9175
+Selection-loss weight,Weighted BCE + 1.5 L_sel,84.21,94.74,100.00,0.8912
+Temperature / warm-up,"Fixed T=1.0, warm-up 5",78.95,94.74,100.00,0.8649
+Temperature / warm-up,"Cosine T 1.0 to 0.1, warm-up 10",84.21,94.74,100.00,0.8912
+Temperature / warm-up,"Cosine T 1.0 to 0.1, warm-up 5 (full)",89.47,94.74,100.00,0.9175

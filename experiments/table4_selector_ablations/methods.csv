@@ -1,0 +1,19 @@
+ablation_block,variant,train_entry,key_arguments
+Modality,Action Only,../table2_primary_selector/methods/action_only/train_stage1_actionOnly_annealedSelect_v1.py,--soft_top1_weight 1
+Modality,RGB+Action,../table2_primary_selector/methods/rgb_action/train_stage1_clean_structural_nogs_annealedSelect_v1.py,--soft_top1_weight 1
+Modality,GS+Action,../table2_primary_selector/methods/gs_action/train_stage1_gsAction_annealedSelect_v1.py,--soft_top1_weight 1
+Modality,RGB+Action+GS (full),../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,--soft_top1_weight 1
+Local GS region,Left/right contact patches only,methods/local_region/contact_patches_only/train_stage1_clean_structural_no_corridor_annealedSelect_v1.py,--soft_top1_weight 1
+Local GS region,Closing corridor only,methods/local_region/corridor_only/train_stage1_corridorOnly_annealedSelect_v1.py,--soft_top1_weight 1
+Local GS region,Contact patches + corridor (full),../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,--soft_top1_weight 1
+GS node pooling,Mean Only,methods/pooling/mean_only/train_stage1_meanOnly_annealedSelect_v1.py,--soft_top1_weight 1
+GS node pooling,Max Only,methods/pooling/max_only/train_stage1_maxOnly_annealedSelect_v1.py,--soft_top1_weight 1
+GS node pooling,Mean + Max (full),../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,--soft_top1_weight 1
+Selection-loss weight,Weighted BCE only (lambda=0),methods/loss/bce_only/train_stage1_old12_fullcorridor_bceOnly_v1.py,--soft_top1_weight 0
+Selection-loss weight,Weighted BCE + 0.5 L_sel,../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,--soft_top1_weight 0.5
+Selection-loss weight,Weighted BCE + 1.0 L_sel (selected),../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,--soft_top1_weight 1
+Selection-loss weight,Weighted BCE + 1.5 L_sel,../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,--soft_top1_weight 1.5
+Temperature / warm-up,"Fixed T=1.0, warm-up 5",../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 1 --soft_top1_warmup_epochs 5"
+Temperature / warm-up,"Cosine T 1.0 to 0.1, warm-up 10",../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 0.1 --soft_top1_warmup_epochs 10"
+Temperature / warm-up,"Cosine T 1.0 to 0.1, warm-up 5 (full)",../../src/stage1/final/train_stage1_old12_fullcorridor_annealedSelect_v1.py,"--soft_top1_weight 1 --select_temperature_start 1 --select_temperature_end 0.1 --soft_top1_warmup_epochs 5"
+
