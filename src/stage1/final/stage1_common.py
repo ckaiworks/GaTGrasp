@@ -7,6 +7,7 @@ intentionally not a historical training entry point.
 
 import csv
 import random
+from pathlib import Path
 
 import numpy as np
 import torch
@@ -20,9 +21,46 @@ def set_seed(seed):
     torch.cuda.manual_seed_all(seed)
 
 
+RUNTIME_PATH_FIELDS = (
+    "vision_rgb_path",
+    "local_gs_path",
+    "local_gs_feature_path",
+    "tactile_left_after_close_path",
+    "tactile_right_after_close_path",
+)
+
+
+def _portable_dataset_root(csv_path):
+    """Find the extracted dataset root that owns a portable metadata CSV."""
+    for candidate in (csv_path.parent, *csv_path.parents):
+        if (candidate / "metadata" / "dataset_contract.json").is_file():
+            return candidate
+    return None
+
+
 def read_csv(path):
-    with open(path, "r", newline="") as handle:
-        return list(csv.DictReader(handle))
+    """Read an index and resolve packaged relative asset paths in memory.
+
+    The released archive stores paths such as ``data/vision/...`` so it can be
+    extracted anywhere.  Resolution happens here; no copied "runtime index"
+    CSVs are required.
+    """
+    csv_path = Path(path).expanduser().resolve()
+    with csv_path.open("r", newline="", encoding="utf-8-sig") as handle:
+        rows = list(csv.DictReader(handle))
+    dataset_root = _portable_dataset_root(csv_path)
+    if dataset_root is None:
+        return rows
+    for row in rows:
+        row["data_root"] = str(dataset_root)
+        for field in RUNTIME_PATH_FIELDS:
+            value = row.get(field, "")
+            if not value:
+                continue
+            asset = Path(value)
+            if not asset.is_absolute():
+                row[field] = str((dataset_root / asset).resolve())
+    return rows
 
 
 def get_float(row, key, default=0.0):

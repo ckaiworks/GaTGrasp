@@ -25,8 +25,7 @@ EXPECTED_NEGATIVE = 1071
 EXPECTED_TOUCH = 2769
 EXPECTED_BINARY_ROLES = {
     "vision_rgb": 19,
-    "stage1_local_gs": 2850,
-    "stage2_local_gs": 2850,
+    "shared_local_gs": 2850,
     "tactile_left": 2769,
     "tactile_right": 2769,
 }
@@ -103,11 +102,11 @@ def validate_task_rows(root: Path) -> tuple[list[dict[str, str]], list[dict[str,
         for field in paired_fields:
             if row1.get(field, "") != row2.get(field, ""):
                 raise RuntimeError(f"paired value mismatch pair={pair} field={field}")
-        if row1.get("local_gs_path", "") == row2.get("local_gs_path", ""):
-            raise RuntimeError(f"Stage-1/Stage-2 GS paths unexpectedly identical pair={pair}")
+        if row1.get("local_gs_path", "") != row2.get("local_gs_path", ""):
+            raise RuntimeError(f"Stage-1/Stage-2 shared GS paths differ pair={pair}")
         if row1.get("gs_feature_family", "") != "explicit_lrc_actionframe_orthonormal_old12_v1":
             raise RuntimeError(f"invalid Stage-1 GS family pair={pair}")
-        if row2.get("gs_feature_family", "") != "explicit_lrc_actionframe_canonicalV3_worldNative12_v3":
+        if row2.get("gs_feature_family", "") != "explicit_lrc_actionframe_orthonormal_old12_v1":
             raise RuntimeError(f"invalid Stage-2 GS family pair={pair}")
         for row_name, row in (("stage1", row1), ("stage2", row2)):
             validate_relative_file(root, row["vision_rgb_path"], f"{row_name}:{pair}:vision")
@@ -122,7 +121,7 @@ def validate_task_rows(root: Path) -> tuple[list[dict[str, str]], list[dict[str,
     if sum(float(row.get("touch_available", "0") or 0) > 0.5 for row in rows2) != EXPECTED_TOUCH:
         raise RuntimeError("invalid touch-availability count")
 
-    for csv_path in (metadata / "stage1_all.csv", metadata / "stage2_all.csv", metadata / "all.csv"):
+    for csv_path in (metadata / "stage1_all.csv", metadata / "stage2_all.csv"):
         _, csv_rows = read_csv(csv_path)
         leaked = Counter(
             field
@@ -158,7 +157,7 @@ def validate_folds(root: Path, task: str, all_rows: list[dict[str, str]]) -> Non
             raise RuntimeError(f"invalid {task} fold_{fold} split")
 
 
-def validate_file_manifest(root: Path) -> None:
+def validate_file_manifest(root: Path, verify_sha256: bool) -> int:
     _, rows = read_csv(root / "metadata" / "files.csv")
     roles = Counter(row["role"] for row in rows)
     if roles != Counter(EXPECTED_BINARY_ROLES):
@@ -166,24 +165,15 @@ def validate_file_manifest(root: Path) -> None:
     paths = [row["path"] for row in rows]
     if len(paths) != sum(EXPECTED_BINARY_ROLES.values()) or len(set(paths)) != len(paths):
         raise RuntimeError("binary manifest count or uniqueness failure")
+    checked = 0
     for row in rows:
         path = root / Path(*PurePosixPath(row["path"]).parts)
         if not path.is_file() or path.stat().st_size != int(row["bytes"]):
             raise RuntimeError(f"binary manifest mismatch: {row['path']}")
-
-
-def validate_checksums(root: Path) -> int:
-    checksum_path = root / "SHA256SUMS"
-    checked = 0
-    for line in checksum_path.read_text(encoding="utf-8").splitlines():
-        expected, relative = line.split("  ", 1)
-        path = root / Path(*PurePosixPath(relative).parts)
-        if not path.is_file() or sha256(path) != expected:
-            raise RuntimeError(f"SHA-256 mismatch: {relative}")
-        checked += 1
-    actual = sum(1 for path in root.rglob("*") if path.is_file() and path != checksum_path)
-    if checked != actual:
-        raise RuntimeError(f"SHA256SUMS coverage mismatch checked={checked} actual={actual}")
+        if verify_sha256:
+            if sha256(path) != row["sha256"]:
+                raise RuntimeError(f"SHA-256 mismatch: {row['path']}")
+            checked += 1
     return checked
 
 
@@ -198,7 +188,7 @@ def main() -> None:
 
     contract = json.loads((root / "metadata" / "dataset_contract.json").read_text(encoding="utf-8"))
     expected_contract = {
-        "schema_version": 2,
+        "schema_version": 3,
         "rows": EXPECTED_ROWS,
         "positive": EXPECTED_POSITIVE,
         "negative": EXPECTED_NEGATIVE,
@@ -213,8 +203,7 @@ def main() -> None:
     rows1, rows2 = validate_task_rows(root)
     validate_folds(root, "stage1", rows1)
     validate_folds(root, "stage2", rows2)
-    validate_file_manifest(root)
-    checksums = validate_checksums(root) if args.verify_sha256 else 0
+    checksums = validate_file_manifest(root, args.verify_sha256)
     print(f"rows={EXPECTED_ROWS} positive={EXPECTED_POSITIVE} negative={EXPECTED_NEGATIVE}")
     print(f"objects={len(EXPECTED_OBJECTS)} touch_available={EXPECTED_TOUCH}")
     print(f"binary_files={sum(EXPECTED_BINARY_ROLES.values())} sha256_checked={checksums}")

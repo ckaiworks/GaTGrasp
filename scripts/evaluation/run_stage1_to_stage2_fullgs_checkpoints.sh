@@ -14,11 +14,17 @@ source "$CONFIG"
 
 : "${PYTHON_BIN:?missing PYTHON_BIN}"
 : "${CUDA_DEVICE:?missing CUDA_DEVICE}"
-: "${STAGE1_DATA_ROOT:?missing STAGE1_DATA_ROOT}"
-: "${STAGE2_DATA_ROOT:?missing STAGE2_DATA_ROOT}"
+: "${DATASET_ROOT:?missing DATASET_ROOT}"
 : "${STAGE1_RUN_ROOT:?missing STAGE1_RUN_ROOT}"
 : "${STAGE2_FULLGS_RUN_ROOT:?missing STAGE2_FULLGS_RUN_ROOT}"
 : "${CASCADE_CHECKPOINT_OUT:?missing CASCADE_CHECKPOINT_OUT}"
+
+STAGE1_DATA_ROOT="$DATASET_ROOT/metadata/stage1"
+STAGE2_DATA_ROOT="$DATASET_ROOT/metadata/stage2"
+[[ -f "$DATASET_ROOT/metadata/dataset_contract.json" ]] || {
+  echo "INVALID_DATASET_ROOT=$DATASET_ROOT" >&2
+  exit 3
+}
 
 EVALUATOR="$REPO_ROOT/src/evaluation/final/run_cascade.py"
 REFERENCE_SELECTION="$REPO_ROOT/reports/final_stage1_selection/selected_stage1_current_repro17of19_withGS_top1.csv"

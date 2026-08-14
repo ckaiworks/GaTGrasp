@@ -8,10 +8,9 @@ evaluated with the same `raw_pair_id` list.
 |---|---|---|
 | Touch Only | `methods/touch_only/train.py` | bilateral touch only |
 | RGB+Action+Touch | `methods/rgb_action_touch/train.py` | RGB, Action13 and bilateral touch |
-| RGB+Action+Contact GS+Touch | `methods/contact_gs_touch/train.py` | RGB, Action13, left/right contact GS and touch |
-| RGB+Action+Contact GS+Corridor GS+Touch | `methods/contact_corridor_gs_touch/train.py` | RGB, Action13, left/right/corridor GS and touch |
+| RGB+Action+GS+Touch | `methods/contact_corridor_gs_touch/train.py` | RGB, Action13, left/right contact GS, corridor GS and touch |
 
-All four are deterministic single-output Stage-2 controls trained with
+All three are deterministic single-output Stage-2 controls trained with
 weighted BCE. `methods/_shared/` contains shared dataset/touch code and is not
 an additional paper row. `results.csv` contains the exact same-action
 connected inference values used in the current table. The repository's final

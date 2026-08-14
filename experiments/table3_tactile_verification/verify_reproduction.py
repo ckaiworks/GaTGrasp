@@ -34,7 +34,7 @@ def main():
     parser.add_argument("--root", required=True, type=Path)
     args = parser.parse_args()
     report = {"root": str(args.root), "variants": {}, "all_exact": True}
-    for variant in ("nogs", "contactgs", "fullgs"):
+    for variant in ("touch_only", "nogs", "fullgs"):
         folds = {}
         for fold in range(5):
             a = args.root / "reference" / variant / f"fold_{fold}"

@@ -88,7 +88,7 @@ def validate_old12_contract(dataset, split_name):
     paths = {row["local_gs_path"] for row in dataset.rows}
     bad_paths = [
         path for path in paths
-        if "stage1_old12_orthonormal" not in Path(path).as_posix()
+        if "shared_old12_orthonormal" not in Path(path).as_posix()
         or not Path(path).is_file()
     ]
     if bad_paths:

@@ -13,12 +13,17 @@ source "$CONFIG"
 
 : "${PYTHON_BIN:?missing PYTHON_BIN}"
 : "${CUDA_DEVICE:?missing CUDA_DEVICE}"
-: "${STAGE2_DATA_ROOT:?missing STAGE2_DATA_ROOT}"
+: "${DATASET_ROOT:?missing DATASET_ROOT}"
 : "${STAGE2_RUN_ROOT:?missing STAGE2_RUN_ROOT}"
 
 TRAINER="$PROJECT_ROOT/src/stage2/final/train_stage2_fullgs_touch.py"
-DATA_ROOT="$STAGE2_DATA_ROOT"
+DATA_ROOT="$DATASET_ROOT/metadata/stage2"
 MAX_PARALLEL="${STAGE2_MAX_PARALLEL:-5}"
+
+[[ -f "$DATASET_ROOT/metadata/dataset_contract.json" ]] || {
+  echo "INVALID_DATASET_ROOT=$DATASET_ROOT"
+  exit 5
+}
 
 if (( MAX_PARALLEL < 1 || MAX_PARALLEL > 5 )); then
   echo "INVALID_STAGE2_MAX_PARALLEL=$MAX_PARALLEL (expected 1..5)"

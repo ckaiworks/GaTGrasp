@@ -1,5 +1,4 @@
 input,train_entry,evaluation_entry,uses_rgb,uses_action13,uses_contact_gs,uses_corridor_gs,uses_touch
 Touch Only,methods/touch_only/train.py,../../src/evaluation/final/evaluate_fixed_stage1_to_retrained_stage2_variants.py,no,no,no,no,yes
 RGB+Action+Touch,methods/rgb_action_touch/train.py,../../src/evaluation/final/evaluate_fixed_stage1_to_retrained_stage2_variants.py,yes,yes,no,no,yes
-RGB+Action+Contact GS+Touch,methods/contact_gs_touch/train.py,../../src/evaluation/final/evaluate_fixed_stage1_to_stage2_factorial.py,yes,yes,yes,no,yes
-RGB+Action+Contact GS+Corridor GS+Touch,methods/contact_corridor_gs_touch/train.py,../../src/evaluation/final/evaluate_fixed_stage1_to_retrained_stage2_variants.py,yes,yes,yes,yes,yes
+RGB+Action+GS+Touch,methods/contact_corridor_gs_touch/train.py,../../src/evaluation/final/evaluate_fixed_stage1_to_retrained_stage2_variants.py,yes,yes,yes,yes,yes

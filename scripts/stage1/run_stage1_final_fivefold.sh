@@ -12,8 +12,14 @@ source "$CONFIG"
 
 : "${PYTHON_BIN:?missing PYTHON_BIN}"
 : "${CUDA_DEVICE:?missing CUDA_DEVICE}"
-: "${STAGE1_DATA_ROOT:?missing STAGE1_DATA_ROOT}"
+: "${DATASET_ROOT:?missing DATASET_ROOT}"
 : "${STAGE1_RUN_ROOT:?missing STAGE1_RUN_ROOT}"
+
+STAGE1_DATA_ROOT="$DATASET_ROOT/metadata/stage1"
+[[ -f "$DATASET_ROOT/metadata/dataset_contract.json" ]] || {
+  echo "INVALID_DATASET_ROOT=$DATASET_ROOT"
+  exit 5
+}
 
 CODE="$PROJECT_ROOT/src/stage1/final"
 ENTRY="$CODE/train_stage1_old12_fullcorridor_annealedSelect_v1.py"
