@@ -8,8 +8,9 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.7.0-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![CUDA](https://img.shields.io/badge/CUDA-12.8-76B900?logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-toolkit)
 [![Data](https://img.shields.io/badge/Data-Baidu_Netdisk-06A7FF)](https://pan.baidu.com/s/1QukccPOYJeF56yExBHPq1Q?pwd=bsx8)
+[![Paper](https://img.shields.io/badge/Paper-OpenReview-8C1B13)](https://openreview.net/forum?id=BZsC7zDWBO)
 
-**[Installation](#-environment-preparation) · [Data](#-data-and-checkpoints) · [Evaluation](#-quick-evaluation) · [Training](#-model-training) · [Results](#-reported-results)**
+**[Paper](https://openreview.net/forum?id=BZsC7zDWBO) · [Installation](#-environment-preparation) · [Data](#-data-and-checkpoints) · [Evaluation](#-quick-evaluation) · [Training](#-model-training) · [Results](#-reported-results)**
 
 </div>
 
@@ -18,16 +19,6 @@
 Given 150 candidate actions for an unseen object, **Stage 1** ranks the candidates before tactile sensing. After the selected action is executed, **Stage 2** combines visual, action, local 3D Gaussian, and bilateral tactile features to predict whether the grasp is stable.
 
 This repository provides the final training, inference, and ablation code. The prepared dataset and selected five-fold checkpoints are distributed separately because of their size.
-
----
-
-## 📢 Release Status
-
-- [x] Release the training and inference code
-- [x] Release the prepared dataset
-- [x] Release the five-fold checkpoints
-- [x] Release the paper-table reproductions and ablations
-- [ ] Add the final paper link and BibTeX entry
 
 ---
 
@@ -236,4 +227,4 @@ The prepared data and pipeline build on ObjectFolder, PyBullet/TAXIM, VGGT, and 
 
 ## 📜 Citation
 
-Citation metadata will be added when the final paper record is available.
+The paper is available on [OpenReview](https://openreview.net/forum?id=BZsC7zDWBO).
